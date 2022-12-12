@@ -1,0 +1,16 @@
+.user-form{
+    margin-top: 30px !important;
+    max-width: 800px;
+    margin: auto;
+}
+.home{
+    min-height: 100vh;
+}
+.home-columns{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.pointer{
+    cursor: pointer;
+}
