@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { auth } from "./firebase";
 import './multiplayerStyle.css'
+// import { useNavigate } from "react-router-dom";
 
  const UserForm = () => {
      const [name, setName] = useState("");
+      // const navigate = useNavigate();
      
   async function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem("userName", name);
-    await auth.signInAnonymously();
+    await auth.signInAnonymously()
+   
   }
   return (
     <form className="user-form" onSubmit={handleSubmit}>

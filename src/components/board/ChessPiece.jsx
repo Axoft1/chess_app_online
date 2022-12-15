@@ -1,10 +1,10 @@
 import React from "react";
-import { useDrag, DragPreviewImage } from "react-dnd";
+import { useDrag } from "react-dnd";
 
 const ChessPiece = ({ piece: { type, color }, position, styleFigure }) => {
   const newType = type.toUpperCase();
 
-  const [{ isDragging }, drag, dragPreview] = useDrag({
+  const [{ isDragging }, drag] = useDrag({
     item: { type: "piece", id: `${position}_${color}_${newType}` },
 
     collect: (monitor) => {

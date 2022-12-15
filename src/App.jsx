@@ -20,13 +20,12 @@ export default function App() {
     return <UserForm />;
   }
   return (
-    <>
-    
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/game/:id" element={<GameApp />} />
-        </Routes>
-  
-    </>
+    <HashRouter>
+      <Routes>
+        {/* <Route exact path="/" element={<UserForm />} /> */}
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/game/:id" element={<GameApp />} />
+      </Routes>
+    </HashRouter>
   );
 }
