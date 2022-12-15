@@ -4,6 +4,7 @@ import "./multiplayerStyle.css";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  // console.log('re');
   const { currentUser } = auth;
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const Home = () => {
   const handlePlayOnline = () => {
     setShowModal(true);
   };
+  
   const startOnlineGame = async (startingPiece) => {
     const member = {
       uid: currentUser.uid,

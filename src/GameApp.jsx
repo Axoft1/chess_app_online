@@ -9,14 +9,14 @@ function GameApp() {
   const [isGameOver, setIsGameOver] = useState([]);
   const [result, setResult] = useState([]);
   const [position, setPosition] = useState([]);
-  const [ initResult, setInitResult ] = useState(null)
+  const [initResult, setInitResult] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
   const [gameR, setGameR] = useState({});
   const [dropdownStyle, setDropdownStyle] = useState(false);
   const [styleFigure, setStyleFigure] = useState("anarcandy");
   const { id } = useParams();
-  const sharebleLink = window.location.href
+  const sharebleLink = window.location.href;
   const navigate = useNavigate();
 
   const figure = [
@@ -39,44 +39,43 @@ function GameApp() {
   };
 
   const chooseFigure = (value) => {
-    setStyleFigure(value)
+    setStyleFigure(value);
   };
 
   useEffect(() => {
     let subscribe;
     async function init() {
-
       const res = await initGame(id !== "local" ? db.doc(`games/${id}`) : null);
 
-      setInitResult(res)
-      setLoading(false)
-      if(!res){
+      setInitResult(res);
+      setLoading(false);
+      if (!res) {
         subscribe = game.subscribe((game) => {
           setBoard(game.board);
           setIsGameOver(game.isGameOver);
           setResult(game.result);
           setPosition(game.position);
-          setStatus(game.status)
-          setGameR(game)
+          setStatus(game.status);
+          setGameR(game);
         });
       }
     }
     init();
-    return () =>subscribe && subscribe.unsubscribe();
+    return () => subscribe && subscribe.unsubscribe();
   }, [id]);
 
-  const copyToClipboard = async ()=>{
+  const copyToClipboard = async () => {
     await navigator.clipboard.writeText(sharebleLink);
-  }
+  };
 
-  if(loading) {
-    return 'Загрузка ...'
+  if (loading) {
+    return "Загрузка ...";
   }
-  if ( initResult === 'notfound') {
-    return 'Игра не найдена'
+  if (initResult === "notfound") {
+    return "Игра не найдена";
   }
-  if(initResult === 'intruder'){
-    return 'Игра уже создана'
+  if (initResult === "intruder") {
+    return "Игра уже создана";
   }
 
   return (
@@ -119,9 +118,9 @@ function GameApp() {
                 {figure.map(({ lable, value }) => (
                   <>
                     <span
-                    key={value}
+                      key={value}
                       className="dropdown-item button"
-                      onClick={() =>chooseFigure(value)}
+                      onClick={() => chooseFigure(value)}
                     >
                       {lable}
                     </span>
