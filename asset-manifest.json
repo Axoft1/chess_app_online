@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chess_app_online/static/css/main.edbb1396.css",
-    "main.js": "/chess_app_online/static/js/main.d4850c0f.js",
+    "main.js": "/chess_app_online/static/js/main.f32990b5.js",
     "static/media/bN.svg": "/chess_app_online/static/media/bN.94c0704b640651b320f1.svg",
     "static/media/wN.svg": "/chess_app_online/static/media/wN.dc9544a72b2cf7a92579.svg",
     "static/media/bQ.svg": "/chess_app_online/static/media/bQ.85b277f1cea5f7a98fd6.svg",
@@ -16,10 +16,10 @@
     "static/media/wP.svg": "/chess_app_online/static/media/wP.0d51e16994de79a0c1a6.svg",
     "index.html": "/chess_app_online/index.html",
     "main.edbb1396.css.map": "/chess_app_online/static/css/main.edbb1396.css.map",
-    "main.d4850c0f.js.map": "/chess_app_online/static/js/main.d4850c0f.js.map"
+    "main.f32990b5.js.map": "/chess_app_online/static/js/main.f32990b5.js.map"
   },
   "entrypoints": [
     "static/css/main.edbb1396.css",
-    "static/js/main.d4850c0f.js"
+    "static/js/main.f32990b5.js"
   ]
 }
