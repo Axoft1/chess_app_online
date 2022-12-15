@@ -21,12 +21,12 @@ export default function App() {
   }
   return (
     <>
-      <HashRouter>
+    
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/game/:id" element={<GameApp />} />
         </Routes>
-      </HashRouter>
+  
     </>
   );
 }
