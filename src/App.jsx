@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/multiplayer/Home";
 import UserForm from "./components/multiplayer/UserForm";
 import GameApp from "./GameApp";
@@ -20,12 +20,12 @@ export default function App() {
     return <UserForm />;
   }
   return (
-    <HashRouter>
+    <>
       <Routes>
         {/* <Route exact path="/" element={<UserForm />} /> */}
         <Route exact path="/" element={<Home />} />
         <Route exact path="/game/:id" element={<GameApp />} />
       </Routes>
-    </HashRouter>
+    </>
   );
 }
