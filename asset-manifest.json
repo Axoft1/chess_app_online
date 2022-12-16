@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chess_app_online/static/css/main.edbb1396.css",
-    "main.js": "/chess_app_online/static/js/main.aceec056.js",
+    "main.css": "/chess_app_online/static/css/main.6e39d934.css",
+    "main.js": "/chess_app_online/static/js/main.b85c48bb.js",
     "static/media/bN.svg": "/chess_app_online/static/media/bN.94c0704b640651b320f1.svg",
     "static/media/wN.svg": "/chess_app_online/static/media/wN.dc9544a72b2cf7a92579.svg",
     "static/media/bQ.svg": "/chess_app_online/static/media/bQ.85b277f1cea5f7a98fd6.svg",
@@ -10,16 +10,16 @@
     "static/media/wQ.svg": "/chess_app_online/static/media/wQ.6b9db15ae1fcea6d9ef3.svg",
     "static/media/wR.svg": "/chess_app_online/static/media/wR.c051a30b157b9deadd0d.svg",
     "static/media/wB.svg": "/chess_app_online/static/media/wB.bed6659ab900ea044ef5.svg",
-    "static/media/bR.svg": "/chess_app_online/static/media/bR.8cc68a95155f0112b23b.svg",
+    "static/media/bR.svg": "/chess_app_online/static/media/bR.5a188c18cfd36636a443.svg",
     "static/media/bB.svg": "/chess_app_online/static/media/bB.c523a7013fffe34eddda.svg",
     "static/media/bP.svg": "/chess_app_online/static/media/bP.8ba662b53fca25dda716.svg",
     "static/media/wP.svg": "/chess_app_online/static/media/wP.0d51e16994de79a0c1a6.svg",
     "index.html": "/chess_app_online/index.html",
-    "main.edbb1396.css.map": "/chess_app_online/static/css/main.edbb1396.css.map",
-    "main.aceec056.js.map": "/chess_app_online/static/js/main.aceec056.js.map"
+    "main.6e39d934.css.map": "/chess_app_online/static/css/main.6e39d934.css.map",
+    "main.b85c48bb.js.map": "/chess_app_online/static/js/main.b85c48bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.edbb1396.css",
-    "static/js/main.aceec056.js"
+    "static/css/main.6e39d934.css",
+    "static/js/main.b85c48bb.js"
   ]
 }
