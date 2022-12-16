@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import Home from "./components/multiplayer/Home";
 import UserForm from "./components/multiplayer/UserForm";
 import GameApp from "./GameApp";
@@ -8,7 +8,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./components/multiplayer/firebase";
 
 export default function App() {
-  
   const [user, loading, error] = useAuthState(auth);
   if (loading) {
     return "загрузка ...";
@@ -16,7 +15,7 @@ export default function App() {
   if (error) {
     return "Произошла ошибка";
   }
-  if (!user) {    
+  if (!user) {
     return <UserForm />;
   }
   return (

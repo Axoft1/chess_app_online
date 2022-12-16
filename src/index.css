@@ -1,35 +1,37 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.container{
+.container {
   min-height: 100vh;
   /* min-height: 100vw; */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
-.board_container{
+.board_container {
   width: 600px;
   height: 100vw;
   max-height: 600px;
+ 
 }
 
-.vertical_text{
+.vertical_text {
   text-orientation: upright;
   writing-mode: vertical-lr;
   font-family: sans-serif;
@@ -41,12 +43,37 @@ code {
   background: rgba(112, 112, 112, 0.514);
   border-radius: 10px;
 }
-.vertical_text button:hover{
+.vertical_text button:hover {
   background: rgba(0, 153, 255, 0.486);
 }
-.share-game{
+.share-game {
   position: absolute;
   width: 500px;
   bottom: 0;
   left: 0;
+}
+.title-head {
+  background: url("https://i.imgur.com/OUyfQnt.jpg");
+  background-size: cover;
+  position: relative;
+  font-size: 110px * 1.5;
+  text-transform: uppercase;
+  font-family: "Rancho", cursive;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin: -30px 0 30px 0;
+}
+
+.title-head:after {
+  stroke-width: 110px * 0.05;
+  position: absolute;
+  -webkit-text-stroke-width: 110px * 0.05;
+  -webkit-text-stroke-color: rgba(black, 0.6);
+  left: 2px;
+  top: 2px;
+}
+.dropdown{
+  margin: -10px 0 0px 0;
 }

@@ -3,8 +3,7 @@ import Squaere from "./Squaere";
 import ChessPiece from "./ChessPiece";
 import { useDrop } from "react-dnd";
 import { handleMove, game } from "../game/Game";
-import  Promote  from "./Promote";
-
+import Promote from "./Promote";
 
 const BoardItem = ({ piece, black, position, styleFigure }) => {
   const [promotion, setPromotions] = useState(null);

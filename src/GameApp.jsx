@@ -94,9 +94,12 @@ function GameApp() {
         </h2>
       )}
       <div className="board_container">
+        <div>
+          <h1 className="title title-head">ШАХМАТЫ</h1>
+        </div>
         <div className="columns is-mobile">
           <div
-            className={`dropdown column is-4 is-offset-0 ${
+            className={`dropdown column  navbar-start ${
               dropdownStyle ? "is-active" : null
             }`}
             onClick={figureStyle}
@@ -130,7 +133,7 @@ function GameApp() {
             </div>
           </div>
 
-          <div className="column is-4 is-offset-4">
+          <div className="navbar-end">
             <button
               className="button  is-link is-focused "
               onClick={async () => {
@@ -159,8 +162,6 @@ function GameApp() {
           <div className="field has-addons">
             <input
               type="text"
-              name=""
-              id=""
               className="input"
               readOnly
               value={sharebleLink}
