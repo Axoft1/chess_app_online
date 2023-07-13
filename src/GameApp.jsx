@@ -97,7 +97,7 @@ function GameApp() {
         <div>
           <h1 className="title title-head">ШАХМАТЫ</h1>
         </div>
-        <div className="columns is-mobile">
+        <div className="board_columns">
           <div
             className={`dropdown column  navbar-start ${
               dropdownStyle ? "is-active" : null
@@ -132,7 +132,6 @@ function GameApp() {
               </div>
             </div>
           </div>
-
           <div className="navbar-end">
             <button
               className="button  is-link is-focused "

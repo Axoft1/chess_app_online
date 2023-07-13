@@ -17,20 +17,24 @@ code {
 }
 
 .container {
-  min-height: 100vh;
-  /* min-height: 100vw; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
 .board_container {
+  /* border: solid; */
   width: 600px;
   height: 100vw;
   max-height: 600px;
  
 }
-
+.board_columns{
+  display: flex;
+}
+.navbar-end{
+  margin-right: 10px;
+}
 .vertical_text {
   text-orientation: upright;
   writing-mode: vertical-lr;
@@ -48,7 +52,8 @@ code {
 }
 .share-game {
   position: absolute;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   bottom: 0;
   left: 0;
 }
@@ -63,7 +68,7 @@ code {
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
-  margin: -30px 0 30px 0;
+  margin: 30px 0 30px 0;
 }
 
 .title-head:after {

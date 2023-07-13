@@ -7,6 +7,11 @@ import Promote from "./Promote";
 
 const BoardItem = ({ piece, black, position, styleFigure }) => {
   const [promotion, setPromotions] = useState(null);
+  const [lastMove, setLastMove] = useState(null);
+  
+  const whereFrom = lastMove ? lastMove.slice(0, 2) : ""; 
+  const where = lastMove ? lastMove.slice(3, 5) : ""; 
+
   const [, drop] = useDrop({
     accept: "piece",
     drop: (item) => {
@@ -14,7 +19,11 @@ const BoardItem = ({ piece, black, position, styleFigure }) => {
       handleMove(fromPosition, position);
     },
   });
+  // console.log(position);
+  
   useEffect(() => {
+    const savedGame = localStorage.getItem("theLastMove");
+    setLastMove(savedGame);
     const subscribe = game.subscribe(({ pendingPromotion }) =>
       pendingPromotion && pendingPromotion.to === position
         ? setPromotions(pendingPromotion)
@@ -24,7 +33,7 @@ const BoardItem = ({ piece, black, position, styleFigure }) => {
   }, [position]);
   return (
     <div className="board_item" ref={drop}>
-      <Squaere black={black}>
+      <Squaere black={black} move={whereFrom === position} where={where === position}>
         {promotion ? (
           <Promote promotion={promotion} />
         ) : piece ? (

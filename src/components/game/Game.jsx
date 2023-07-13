@@ -7,8 +7,8 @@ let gameRef;
 let member;
 const chess = new Chess();
 let game;
-
 const initGame = async (gameRefFb) => {
+  
   // console.log(gameRefFb);
   const { currentUser } = auth;
   if (gameRefFb) {
@@ -76,6 +76,7 @@ const resetGame = async () => {
 };
 
 const handleMove = (from, to) => {
+  
   const promotions = chess.moves({ verbose: true }).filter((m) => m.promotion);
   console.table(promotions);
   let pendingPromotion;
@@ -89,6 +90,7 @@ const handleMove = (from, to) => {
 };
 
 const getGameResult = () => {
+  
   if (chess.isCheckmate()) {
     const winner = chess.turn() === "w" ? "ЧЕРНЫЕ" : "БЕЛЫЕ";
     return `МАТ - ПОБЕДИТЕЛЬ - ${winner}`;
@@ -108,6 +110,8 @@ const getGameResult = () => {
 };
 
 const move = (from, to, promotion) => {
+  console.log(from,to);
+  localStorage.setItem("theLastMove", [from, to]);
   let tempMove = { from, to };
   if (promotion) {
     tempMove.promotion = promotion;
